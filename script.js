@@ -1,33 +1,51 @@
-const autoText = document.getElementById("autoText");
-const profileCard = document.getElementById("profileCard");
-
-const messages = [
-  "🧠 Initializing ORO Agent...",
-  "🔒 Encrypting personal vault...",
-  "💾 Secure compute environment ready.",
-  "🚀 Decentralized AI economy activated!"
-];
-let index = 0;
-
-function typeMessage() {
-  if (index < messages.length) {
-    autoText.textContent = messages[index];
-    index++;
-    setTimeout(typeMessage, 1800);
-  } else {
-    autoText.textContent = "✅ ORO Agent is online. Identity verified.";
-    showProfileCard();
+function generateNeuraID() {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let id = '';
+  for (let i = 0; i < 5; i++) {
+    id += chars.charAt(Math.floor(Math.random() * chars.length));
   }
+  return 'ORO-' + id;
 }
 
-function showProfileCard() {
-  profileCard.classList.remove("hidden");
-  profileCard.style.display = "block";
-}
+document.getElementById('generateBtn').addEventListener('click', () => {
+  const username = document.getElementById('username').value.trim();
+  if (!username) {
+    alert('Please enter your username.');
+    return;
+  }
 
-function startDemo() {
-  profileCard.classList.add("hidden");
-  profileCard.style.display = "none";
-  index = 0;
-  typeMessage();
+  const card = document.getElementById('card');
+  const cardUsername = document.getElementById('card-username');
+  const cardId = document.getElementById('card-id');
+  const qrcodeContainer = document.getElementById('qrcode');
+  const downloadBtn = document.getElementById('downloadBtn');
+
+  const neuraId = generateNeuraID();
+
+  cardUsername.textContent = username;
+  cardId.textContent = neuraId;
+
+  qrcodeContainer.innerHTML = '';
+  new QRCode(qrcodeContainer, {
+    text: neuraId,
+    width: 50,
+    height: 50,
+    colorDark: "#00ffcc",
+    colorLight: "transparent",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  card.style.display = 'block';
+  downloadBtn.style.display = 'inline-block';
+
+  downloadBtn.onclick = () => downloadCardAsPNG(card, username);
+});
+
+function downloadCardAsPNG(card, username) {
+  html2canvas(card, { backgroundColor: null }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `${username}_ID.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
 }
