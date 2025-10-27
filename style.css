@@ -29,7 +29,7 @@ body {
   font-size: 26px;
   color: #00ffaa;
   margin-bottom: 15px;
-  text-shadow: 0 0 15px #FFA500;
+  text-shadow: 0 0 15px #0A0F1C;
 }
 
 input {
@@ -45,7 +45,7 @@ input {
 }
 
 button {
-  background: Linear-gradient(90deg, #FFA500, #00cc88);
+  background: Linear-gradient(90deg, #0A0F1C, #00cc88);
   border: none;
   padding: 12px 35px;
   border-radius: 12px;
@@ -58,7 +58,7 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #FFA500;
+  box-shadow: 0 0 15px #0A0F1C;
 }
 
 .card {
@@ -113,7 +113,7 @@ button:hover {
 
 
 .neura-id {
-  color: #FFA500;
+  color: #0A0F1C;
   font-weight: bold;
 }
 
@@ -139,7 +139,7 @@ button:hover {
   text-align: center;
   font-size: 11px;
   font-family: 'Orbitron', sans-serif;
-  color: #FFA500;
+  color: #0A0F1C;
   letter-spacing: 1px;
   opacity: 0.8;
   text-shadow: 0 0 8px #1A0E00;
