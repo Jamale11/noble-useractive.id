@@ -45,7 +45,7 @@ input {
 }
 
 button {
-  background: Linear-gradient(90deg, #0A0F1C, #00cc88);
+  background: Linear-gradient(90deg, #0A0F1C, #FFFFFF);
   border: none;
   padding: 12px 35px;
   border-radius: 12px;
@@ -68,11 +68,11 @@ button:hover {
   height: 200px;
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0d0d0d, #FFA500, #004d26);
+  background: linear-gradient(135deg, #0A0F1C, #FFFFFF, #004d26);
   box-shadow: 0 0 25px rgba(0,255,150,0.3);
   padding: 20px;
   text-align: left;
-  border: 1px solid rgba(0,255,150,0.4);
+  border: 2px solid rgba(0,255,150,0.4);
 }
 
 .card-header {
