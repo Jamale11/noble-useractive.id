@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOBLE USER ACTIVE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">NOBLE USER ACTIVE</h1>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button id="generateBtn">Generate Noble User</button>
+
+    <div id="card" class="card" style="display:none;">
+      <div class="card-header">
+        <img src="oro-logo.jpg" alt="Oro Logo" class="logo">
+        <h2 style="color: #FF8C00;">Noble User Active</h2>
+        
+      </div>
+
+      <div class="card-body">
+        <p><span class="label">Name:</span> <span id="card-username"></span></p>
+        <p><span class="label">Status:</span> ✅ Active Member</p>
+        <p><span class="label">ID:</span> <span id="card-id" class="Oro-id"></span></p>
+        <p><span class="label">Verification:</span> ✅ Verified</p>
+      </div>
+
+      <div id="qrcode"></div>
+      <p class="footer"></p>
+      <p class="powered">Powered by Noble_xyz</p>
+      
+    </div>
+
+    <button id="downloadBtn" style="display:none;">Download as PNG</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
