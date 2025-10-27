@@ -4,7 +4,7 @@ function generateNeuraID() {
   for (let i = 0; i < 5; i++) {
     id += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return 'ORO-' + id;
+  return 'Noble-' + id;
 }
 
 document.getElementById('generateBtn').addEventListener('click', () => {
