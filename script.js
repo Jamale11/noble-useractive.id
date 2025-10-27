@@ -30,7 +30,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     text: neuraId,
     width: 50,
     height: 50,
-    colorDark: "#00ffcc",
+    colorDark: "#0A0F1C",
     colorLight: "transparent",
     correctLevel: QRCode.CorrectLevel.H
   });
